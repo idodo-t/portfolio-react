@@ -13,7 +13,7 @@ function App() {
           <div className="flex gap-6 items-center uppercase text-[10px] font-bold tracking-widest">
             <a href="#experience" className="hidden md:block hover:text-blue-400">Parcours</a>
             <a href="#projets" className="hidden md:block hover:text-blue-400">Projets</a>
-            <a href="https://linkedin.com/in/dodo-tahirou" target="_blank" className="bg-blue-600 px-4 py-2 rounded-full text-white">LinkedIn</a>
+            <a href="/votre-cv.pdf" target="_blank" rel="noreferrer" className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full text-xs font-bold transition-all shadow-lg shadow-blue-500/20">
           </div>
         </div>
       </nav>
