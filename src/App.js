@@ -57,7 +57,7 @@ function App() {
               <span className="text-blue-600">ABDOUL SALAM</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-400 max-w-3xl leading-relaxed mb-10">
-              Élève Ingénieur d'État en <span className="text-white font-bold">IA & Data Science</span> à l'EMSI Rabat. Spécialisé en <span className="text-blue-400 font-bold">LLM, RAG, et IA Agentique</span>. <span className="text-white font-bold">Software Engineer</span>. <span className="text-white font-bold">Full Stack</span>Passionné par l'innovation technologique appliquée à l'<b>Agriculture & l'AgriTech</b>.
+              Élève Ingénieur d'État en <span className="text-white font-bold">IA & Data Science</span> à l'EMSI Rabat. Spécialisé en <span className="text-blue-400 font-bold">LLM, RAG, et IA Agentique</span>. <span className="text-white font-bold">Software Engineer</span>. <span className="text-blue-400 font-bold">Full Stack</span>. Passionné par l'innovation technologique appliquée à l'<b>Agriculture & l'AgriTech</b>.
             </p>
             
             <div className="flex flex-wrap gap-4 items-center mb-10 justify-center md:justify-start">
