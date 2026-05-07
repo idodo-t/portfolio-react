@@ -1,5 +1,6 @@
 import React from 'react';
 import { Bot, Shield, Cpu, Database, Layout, Globe, Server, Scale, BarChart3, BookOpen, Mail, Phone, MapPin, Download } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react'; // <-- AJOUTÉ : Importation du suivi
 
 function App() {
   // CONFIGURATION DES LIENS - VERIFIE BIEN L'EXTENSION ICI (.jpg ou .jpeg)
@@ -104,7 +105,7 @@ function App() {
           <ProjectCard icon={<Database size={24} />} title="Décisionnel / BI" tech="ETL | Data Warehouse" desc="Conception d'entrepôt de données et tableaux de bord décisionnels." />
           <ProjectCard icon={<BookOpen size={24} />} title="NoSQL & MongoDB" tech="Gestion de Données" desc="Architecture de base de données non-relationnelle pour grands volumes." />
           <ProjectCard icon={<Layout size={24} />} title="Plateforme Médicale" tech="C# .NET | SQL" desc="Application web complète de gestion de rendez-vous pour clinique." />
-          <ProjectCard icon={<Server size={24} />} title="Linux & Cybersec" tech="Administration" desc="Durcissement système, sécurité serveur et gestion des vulnérabilités." />
+          <ProjectCard icon={<Server size={24} />} title="Linux & Cybersec" tech="Administration" desc="Durcissement système, sécurité serveur et gestion des vulnérables." />
           <ProjectCard icon={<Scale size={24} />} title="Éthique de l'IA" tech="Conformité RGPD" desc="Étude et déploiement responsable de systèmes IA sécurisés." />
         </div>
       </section>
@@ -149,6 +150,8 @@ function App() {
       <footer className="py-10 text-center text-slate-600 text-[10px] font-bold uppercase tracking-[0.5em] border-t border-white/5">
         © {new Date().getFullYear()} Dodo Tahirou Abdoul Salam • IA & AGRI-INNOVATION
       </footer>
+
+      <Analytics /> {/* <-- AJOUTÉ : Le composant qui compte les visites en toute discrétion */}
     </div>
   );
 }
