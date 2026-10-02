@@ -28,7 +28,7 @@ import {
 } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 
-const cvPath = '/Cv_AbdoulSalam_dodoTahirou.pdf';
+const cvPath = `${process.env.PUBLIC_URL}/Cv_AbdoulSalam_dodoTahirou.pdf`;
 const myEmail = 'dodotahirouabdoulsalam2003@gmail.com';
 const linkedinUrl = 'https://www.linkedin.com/in/idodo12';
 const githubUrl = 'https://github.com/';
@@ -491,7 +491,7 @@ function App() {
                 <a href="#contact" className="button button-primary">
                   <Mail size={18} /> Contact Me
                 </a>
-                <a href={cvPath} target="_blank" rel="noreferrer" className="button button-secondary">
+                <a href={cvPath} download className="button button-secondary">
                   <Download size={18} /> Download CV
                 </a>
                 <a href={linkedinUrl} target="_blank" rel="noreferrer" className="button button-ghost">
