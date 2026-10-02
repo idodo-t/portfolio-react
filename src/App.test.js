@@ -25,7 +25,10 @@ test('opens skill details and closes them with Escape', () => {
   fireEvent.keyDown(window, { key: 'Escape' });
 
   fireEvent.click(screen.getByRole('button', { name: /Generative & Agentic AI/ }));
-  expect(screen.getByRole('dialog')).toHaveTextContent(/Hugging Face/);
+  const skillDialog = screen.getByRole('dialog');
+  expect(skillDialog).toHaveTextContent(/Hugging Face/);
+  expect(skillDialog).toHaveTextContent(/My work spans/);
+  expect(skillDialog).not.toHaveTextContent(/the CV|latest CV/i);
 
   fireEvent.keyDown(window, { key: 'Escape' });
   expect(screen.queryByRole('dialog')).not.toBeInTheDocument();

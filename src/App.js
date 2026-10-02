@@ -42,7 +42,7 @@ const experience = [
     company: 'France Monceau',
     location: 'Paris, France (remote, part-time)',
     period: 'Since July 2026',
-    description: 'Part-time remote role focused on an intelligent e-commerce product and AI-supported business operations.',
+    description: 'I build an intelligent e-commerce product and integrate AI-supported decision tools as part of a remote, part-time role.',
     responsibilities: [
       'Developed an e-commerce platform integrating an online store, CRM, and call-center workflows.',
       'Integrated AI-based decision-support solutions into the product.',
@@ -53,7 +53,7 @@ const experience = [
     company: '3LM Solutions',
     location: 'Bizerte, Tunisia (remote, part-time)',
     period: 'Since July 2026',
-    description: 'Part-time remote software role spanning CRM workflows, a call-center module, and mobile product development.',
+    description: 'At 3LM Solutions, I develop CRM and call-center workflows and contribute to mobile application development.',
     responsibilities: [
       'Developed a CRM, a call-center module, and a business interface.',
       'Contributed to mobile application development.',
@@ -64,7 +64,7 @@ const experience = [
     company: 'Technorium Company',
     location: 'Niamey, Niger',
     period: 'Aug–Oct 2024',
-    description: 'Software engineering experience combining front-end and back-end development, system scripting, and Agile teamwork.',
+    description: 'I built front-end and back-end features, optimized system scripts, and collaborated with an Agile team.',
     responsibilities: [
       'Built front-end and back-end features with JavaScript and Java.',
       'Optimized system scripts and collaborated within an Agile team.',
@@ -78,28 +78,28 @@ const education = [
     school: 'Université Côte d’Azur, France',
     period: '2026–2027',
     note: 'Double degree, delivered in Morocco',
-    description: 'French national Master 2 in applied AI, pursued as part of a double-degree path and delivered in Morocco.',
+    description: 'I am pursuing a French national Master 2 in Applied AI as part of my double degree, delivered in Morocco.',
   },
   {
     title: 'State Engineer Degree — Artificial Intelligence & Data Science',
     school: 'EMSI, Rabat',
     period: '2025–2027',
     note: 'Bac+5 engineering degree',
-    description: 'State engineering degree in Artificial Intelligence and Data Science at EMSI in Rabat.',
+    description: 'I am completing my State Engineer Degree in Artificial Intelligence and Data Science at EMSI in Rabat.',
   },
   {
     title: "Bachelor's Degree — Software Engineering",
     school: 'FST Errachidia',
     period: '2023–2024',
     note: 'FST Errachidia, Moulay Ismaïl University',
-    description: 'Undergraduate degree in Software Engineering completed at FST Errachidia, Moulay Ismaïl University.',
+    description: 'I completed my Software Engineering degree at FST Errachidia, Moulay Ismaïl University.',
   },
   {
     title: 'DEUST — Math, CS & Physics',
     school: 'FST Errachidia',
     period: '2021–2023',
     note: 'FST Errachidia, Moulay Ismaïl University',
-    description: 'Two-year diploma covering Mathematics, Computer Science, and Physics.',
+    description: 'I completed a two-year diploma in Mathematics, Computer Science, and Physics.',
   },
 ];
 
@@ -110,9 +110,9 @@ const projects = [
     category: 'AI',
     tech: 'CNN • TensorFlow • Deep Learning',
     metric: '96% accuracy',
-    summary: 'Deep-learning model for detecting malware patterns from structured input data with high predictive performance.',
-    description: 'This project focuses on building an intelligent malware detection system using convolutional neural networks. The goal was to learn patterns in malware-related features and separate malicious samples from benign ones with strong generalization and a low false-negative rate.',
-    context: 'Academic AI project focused on applied deep learning and classification performance.',
+    summary: 'I built a CNN classifier to detect malware patterns in structured data, achieving 96% accuracy.',
+    description: 'I designed and implemented a CNN-based malware detector to distinguish malicious from benign samples. I focused on preparing useful features and validating the model for reliable classification.',
+    context: 'I developed this academic AI project to explore deep learning for malware classification.',
     role: 'I designed and implemented the model pipeline, from data preparation and feature transformation to training, validation, and performance evaluation.',
     contributions: [
       'Developed the CNN-based classification pipeline in Python using TensorFlow/Keras.',
@@ -132,9 +132,9 @@ const projects = [
     category: 'AI',
     tech: 'YOLOv8 ',
     metric: '92% accuracy',
-    summary: 'Computer-vision system for detecting food items and nutritional cues to support practical decision-making in food-related contexts.',
-    description: 'This project explores automated object detection for food recognition and nutritional analysis using computer vision. The system was designed to identify items from images and support agricultural and health-oriented applications where rapid visual interpretation is valuable.',
-    context: 'Applied computer-vision project combining image analysis and practical use cases in health and agriculture.',
+    summary: 'I worked on a computer-vision system for food-item and nutritional-value detection using YOLOv8.',
+    description: 'I contributed to a YOLOv8-based system that detects food items and nutritional cues in images. I worked on preparing the dataset, configuring the model, and evaluating its performance for practical food and agriculture use cases.',
+    context: 'I applied computer vision to practical food-recognition use cases in health and agriculture.',
     role: 'I contributed to the model pipeline, dataset preparation, and evaluation strategy for the detection system.',
     contributions: [
       'Worked with image annotation and dataset preparation for training an object-detection model.',
@@ -154,9 +154,9 @@ const projects = [
     category: 'AI',
     tech: 'LangChain • Vector Memory • Few-Shot',
     metric: 'Advanced reasoning',
-    summary: 'Conversational assistant combining retrieval-augmented generation, memory, and reasoning chains for deeper contextual interactions.',
-    description: 'This project implements an AI assistant that goes beyond a simple chatbot by combining retrieval mechanisms, vector memory, few-shot prompting, and agentic behavior to answer questions more intelligently and contextually. It is designed for document-based interaction and advanced reasoning tasks.',
-    context: 'AI prototype / advanced LLM application built around retrieval and reasoning workflows.',
+    summary: 'I worked on a conversational assistant combining RAG, vector memory, and agentic workflows.',
+    description: 'I worked on an AI assistant that answers questions using document retrieval, vector memory, few-shot prompting, and agentic behavior. My focus was the assistant architecture, retrieval setup, and memory-aware conversation flow.',
+    context: 'I explored how retrieval and reasoning workflows can make LLM applications more useful.',
     role: 'I worked on the assistant architecture, prompt strategy, retrieval setup, and the integration of memory-aware conversational logic.',
     contributions: [
       'Built the RAG pipeline using vector retrieval and document chunking strategies.',
@@ -176,9 +176,9 @@ const projects = [
     category: 'Data',
     tech: 'ML • Regression • Scikit-learn',
     metric: 'Predictive analytics',
-    summary: 'Machine-learning forecasting system for hotel occupancy trends to improve planning and business decisions.',
-    description: 'This project focuses on predicting room occupancy using historical and feature-based data. The objective was to turn operational data into actionable forecasts that can support pricing, staffing, and planning decisions in hospitality environments.',
-    context: 'Data-science project centered on forecasting and decision support in a business context.',
+    summary: 'I built a machine-learning workflow to forecast hotel occupancy and support operational planning.',
+    description: 'I used historical and feature-based data to estimate hotel occupancy and turn operational data into useful forecasts. I handled data preparation, feature engineering, model selection, validation, and communicating the results.',
+    context: 'I applied data science to forecasting and business decision support in hospitality.',
     role: 'I handled the end-to-end pipeline: data cleaning, feature engineering, model selection, training, validation, and communication of the results.',
     contributions: [
       'Developed forecasting models using regression and machine-learning techniques.',
@@ -198,9 +198,9 @@ const projects = [
     category: 'Data',
     tech: 'ETL • BI • Data Modeling',
     metric: 'Decision support',
-    summary: 'Data warehouse and ETL design for structured reporting, dashboards, and business decision support.',
-    description: 'This project covers the design of a business intelligence architecture based on ETL pipelines and structured data warehousing. The goal was to transform raw operational data into reliable analytical information for dashboards, reporting, and decision-making.',
-    context: 'Data-engineering project with enterprise-style analytics and reporting goals.',
+    summary: 'I worked on a data warehouse and ETL workflow for dashboards and business decision support.',
+    description: 'I helped design a business-intelligence architecture that transforms operational data into reliable reporting and dashboard inputs. My work covered data modeling, ETL logic, and organizing information around business needs.',
+    context: 'I worked on data engineering for structured analytics and business reporting.',
     role: 'I contributed to the design of the warehouse model, ETL logic, and reporting structure to support analytical use cases.',
     contributions: [
       'Modeled and structured data for analytical reporting.',
@@ -220,9 +220,9 @@ const projects = [
     category: 'Data',
     tech: 'MQTT • IoT • Dashboard',
     metric: 'Live monitoring',
-    summary: 'Real-time monitoring dashboard for connected devices and sensor data using MQTT-based communication.',
-    description: 'This project focuses on building an operational monitoring system where IoT sensor data is streamed in real time and visualized through a dashboard. The result is a practical observability tool for infrastructure and device-level monitoring.',
-    context: 'IoT / monitoring project centered on real-time data flow and system visibility.',
+    summary: 'I contributed to a real-time IoT dashboard that monitors sensor data over MQTT.',
+    description: 'I helped connect sensor data to a live dashboard through MQTT messaging. My work focused on the data flow, real-time visualization, and making device status easier to monitor.',
+    context: 'I explored real-time data flow and system visibility with connected devices.',
     role: 'I participated in the architecture and implementation of the data flow, from MQTT message handling to the live dashboard interface.',
     contributions: [
       'Connected sensors or simulated devices to a real-time messaging layer.',
@@ -242,9 +242,9 @@ const projects = [
     category: 'Full-Stack',
     tech: 'MongoDB • Node.js • React',
     metric: 'Data-driven app',
-    summary: 'NoSQL-based library management platform for catalog management, user records, loans, and document workflows.',
-    description: 'This application was designed to centralize library operations such as book management, member records, borrowing flows, and administrative processes. The project highlights full-stack development with a document-oriented database architecture.',
-    context: 'Full-stack project for a practical, data-driven application in a library administration scenario.',
+    summary: 'I helped build a MongoDB library platform for catalog, member, and lending workflows.',
+    description: 'I contributed to a full-stack library application that brings book management, member records, and borrowing workflows together. I worked across the data model, application logic, and user-facing interface.',
+    context: 'I helped create a practical, data-driven application for everyday library administration.',
     role: 'I contributed to both the back-end logic and the front-end interface to support users and administrators in daily operations.',
     contributions: [
       'Designed the data model for books, users, and loans using MongoDB.',
@@ -264,9 +264,9 @@ const projects = [
     category: 'Cybersecurity',
     tech: 'Linux • Security • Hardening',
     metric: 'System resilience',
-    summary: 'Server hardening project focused on security baseline improvements, access control, and system resilience.',
-    description: 'This project addresses infrastructure security by hardening a Linux server and reinforcing the configuration against common attack vectors. The focus was on building a more secure and resilient system environment through configuration and access-management best practices.',
-    context: 'Cybersecurity and systems administration project focused on secure infrastructure practices.',
+    summary: 'I worked on Linux server hardening to improve access control and system resilience.',
+    description: 'I reviewed and hardened a Linux server configuration to reduce exposure to common infrastructure risks. My work focused on access control, service protection, and documenting practical security measures.',
+    context: 'I applied cybersecurity and systems-administration practices to Linux infrastructure.',
     role: 'I worked on the security setup, baseline improvements, and the analysis of key hardening measures needed for a safer server environment.',
     contributions: [
       'Reviewed server configurations and identified security gaps.',
@@ -286,9 +286,9 @@ const projects = [
     category: 'Full-Stack',
     tech: 'C# • .NET • SQL',
     metric: 'Clinical workflow',
-    summary: 'Medical appointment platform designed to streamline patient scheduling, consultation management, and administrative workflows.',
-    description: 'This project is a healthcare-oriented booking platform built to manage appointment scheduling and administrative coordination. The system is intended to improve medical workflow organization and simplify patient booking experiences.',
-    context: 'Full-stack professional software project in a healthcare management scenario.',
+    summary: 'I contributed to a C# .NET platform for medical appointments and administrative workflows.',
+    description: 'I contributed to a healthcare booking platform for organizing appointments and patient workflows. My work focused on application design and implementing scheduling and business logic in a .NET environment.',
+    context: 'I contributed to a full-stack software project for healthcare appointment management.',
     role: 'I contributed to the application design and implementation of the booking and workflow logic within a .NET environment.',
     contributions: [
       'Developed the core business flow for appointment scheduling and patient management.',
@@ -305,48 +305,48 @@ const projects = [
 ];
 
 const skills = [
-  { label: 'Generative & Agentic AI', icon: <Bot size={22} />, summary: 'Building language-model applications that combine retrieval, agents, prompting, and model adaptation.', details: 'The CV highlights practical focus across generative AI, retrieval-augmented generation, agentic workflows, and fine-tuning.', values: ['LLMs', 'RAG', 'Agentic AI', 'LangChain', 'Hugging Face', 'Prompt engineering', 'Fine-tuning', 'Generative AI'] },
-  { label: 'Machine Learning & Deep Learning', icon: <BrainCircuit size={22} />, summary: 'Model development and data preparation for classification and predictive machine-learning tasks.', details: 'The toolkit spans deep-learning frameworks, classical machine learning, numerical computing, data analysis, and GPU-accelerated workflows.', values: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'CNN', 'NumPy', 'Pandas', 'Advanced ML (R)', 'GPU-accelerated ML'] },
-  { label: 'Computer Vision & NLP', icon: <Target size={22} />, summary: 'Visual recognition and language-processing foundations for applied AI products.', details: 'Computer-vision work includes CNN-based classification and YOLOv8 object detection; the CV also lists Natural Language Processing.', values: ['Computer Vision', 'CNN', 'YOLOv8', 'Natural Language Processing'] },
-  { label: 'MLOps & Deployment', icon: <Server size={22} />, summary: 'Tools for packaging, serving, tracking, and deploying machine-learning applications.', details: 'The deployment toolkit includes API development, experiment tracking, environment management, version control, containers, and CI/CD.', values: ['Docker', 'Git / GitHub', 'CI/CD', 'FastAPI', 'MLflow', 'Conda', 'AI application deployment'] },
-  { label: 'Data & Databases', icon: <Database size={22} />, summary: 'Relational and NoSQL data systems, business intelligence, and data integration.', details: 'The CV lists SQL and MongoDB alongside Big Data concepts, BI, and ETL workflows for analytical and operational use cases.', values: ['SQL', 'MySQL', 'MongoDB', 'Big Data', 'BI', 'ETL'] },
-  { label: 'Optimization & Reasoning', icon: <Cpu size={22} />, summary: 'Methods for structured decision-making and intelligent systems.', details: 'The profile includes combinatorial optimization, reactive AI, automated reasoning, and decision management.', values: ['Combinatorial optimization', 'Reactive AI', 'Automated reasoning', 'Decision management'] },
-  { label: 'Programming Languages', icon: <Layout size={22} />, summary: 'A broad programming foundation across application, systems, and AI development.', details: 'Languages listed in the CV include Python, C-family languages, Java, PHP, and JavaScript.', values: ['Python', 'C++', 'C', 'C# .NET', 'Java', 'PHP', 'JavaScript'] },
-  { label: 'Web & Mobile', icon: <Layout size={22} />, summary: 'Web and mobile application development across modern JavaScript and mobile stacks.', details: 'The CV lists experience and tools across React, React Native, Node.js, Kotlin, and Flutter.', values: ['React', 'React Native', 'Node.js', 'Kotlin', 'Flutter'] },
-  { label: 'Cloud & Systems', icon: <Shield size={22} />, summary: 'Cloud foundations, Linux administration, connected devices, and cybersecurity.', details: 'The systems profile combines Oracle Cloud Infrastructure with Linux, MQTT-based IoT, and cybersecurity.', values: ['Oracle Cloud (OCI)', 'Linux', 'IoT (MQTT)', 'Cybersecurity'] },
-  { label: 'Certifications', icon: <CheckCircle2 size={22} />, summary: 'Five credentials covering cloud AI, data, agile methods, and front-end development.', details: 'The latest CV lists one dated Oracle certification and four additional course credentials.', values: ['OCI AI Foundations Associate (2026)', 'Introduction to Big Data', 'Agile Project Management', 'React Native', 'React Basics'] },
-  { label: 'Languages & Mobility', icon: <MapPin size={22} />, summary: 'Multilingual communication and a Category B driving licence.', details: 'French and Hausa are listed as native languages; English is advanced, with Zarma and Darija also included.', values: ['French (native)', 'English (advanced)', 'Hausa (native)', 'Zarma (native)', 'Darija (basic)', 'Driving licence: Category B'] },
+  { label: 'Generative & Agentic AI', icon: <Bot size={22} />, summary: 'I build language-model applications that combine retrieval, agents, prompting, and model adaptation.', details: 'My work spans generative AI, retrieval-augmented generation, agentic workflows, and fine-tuning.', values: ['LLMs', 'RAG', 'Agentic AI', 'LangChain', 'Hugging Face', 'Prompt engineering', 'Fine-tuning', 'Generative AI'] },
+  { label: 'Machine Learning & Deep Learning', icon: <BrainCircuit size={22} />, summary: 'I develop models and prepare data for classification and predictive machine-learning tasks.', details: 'I work with deep-learning frameworks, classical machine learning, numerical computing, data analysis, and GPU-accelerated workflows.', values: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'CNN', 'NumPy', 'Pandas', 'Advanced ML (R)', 'GPU-accelerated ML'] },
+  { label: 'Computer Vision & NLP', icon: <Target size={22} />, summary: 'I work on visual recognition and language-processing applications.', details: 'My computer-vision work includes CNN-based classification and YOLOv8 object detection; my toolkit also includes Natural Language Processing.', values: ['Computer Vision', 'CNN', 'YOLOv8', 'Natural Language Processing'] },
+  { label: 'MLOps & Deployment', icon: <Server size={22} />, summary: 'I use tools to package, serve, track, and deploy machine-learning applications.', details: 'My deployment toolkit includes API development, experiment tracking, environment management, version control, containers, and CI/CD.', values: ['Docker', 'Git / GitHub', 'CI/CD', 'FastAPI', 'MLflow', 'Conda', 'AI application deployment'] },
+  { label: 'Data & Databases', icon: <Database size={22} />, summary: 'I work with relational and NoSQL data systems, business intelligence, and data integration.', details: 'I use SQL and MongoDB alongside Big Data concepts, BI, and ETL workflows for analytical and operational use cases.', values: ['SQL', 'MySQL', 'MongoDB', 'Big Data', 'BI', 'ETL'] },
+  { label: 'Optimization & Reasoning', icon: <Cpu size={22} />, summary: 'I explore methods for structured decision-making and intelligent systems.', details: 'My areas of focus include combinatorial optimization, reactive AI, automated reasoning, and decision management.', values: ['Combinatorial optimization', 'Reactive AI', 'Automated reasoning', 'Decision management'] },
+  { label: 'Programming Languages', icon: <Layout size={22} />, summary: 'I program across application, systems, and AI development.', details: 'I work with Python, C-family languages, Java, PHP, and JavaScript.', values: ['Python', 'C++', 'C', 'C# .NET', 'Java', 'PHP', 'JavaScript'] },
+  { label: 'Web & Mobile', icon: <Layout size={22} />, summary: 'I develop web and mobile applications across modern JavaScript and mobile stacks.', details: 'My web and mobile toolkit includes React, React Native, Node.js, Kotlin, and Flutter.', values: ['React', 'React Native', 'Node.js', 'Kotlin', 'Flutter'] },
+  { label: 'Cloud & Systems', icon: <Shield size={22} />, summary: 'I work across cloud foundations, Linux, connected devices, and cybersecurity.', details: 'My systems toolkit combines Oracle Cloud Infrastructure with Linux, MQTT-based IoT, and cybersecurity.', values: ['Oracle Cloud (OCI)', 'Linux', 'IoT (MQTT)', 'Cybersecurity'] },
+  { label: 'Certifications', icon: <CheckCircle2 size={22} />, summary: 'My credentials cover cloud AI, data, agile methods, and front-end development.', details: 'I hold the OCI AI Foundations Associate certification (2026) and have completed credentials in Big Data, Agile Project Management, React Native, and React Basics.', values: ['OCI AI Foundations Associate (2026)', 'Introduction to Big Data', 'Agile Project Management', 'React Native', 'React Basics'] },
+  { label: 'Languages & Mobility', icon: <MapPin size={22} />, summary: 'I speak five languages and hold a Category B driving licence.', details: 'French and Hausa are my native languages. I have advanced English, and I also speak Zarma and basic Darija.', values: ['French (native)', 'English (advanced)', 'Hausa (native)', 'Zarma (native)', 'Darija (basic)', 'Driving licence: Category B'] },
 ];
 
 const stats = [
-  { label: 'selected projects', value: 9, suffix: '', description: 'Nine featured projects are presented across AI, data, full-stack engineering, and cybersecurity.' },
-  { label: 'countries in experience', value: 3, suffix: '', description: 'Professional experience spans France, Tunisia, and Niger.' },
-  { label: 'certifications', value: 5, suffix: '', description: 'Five certifications and course credentials are listed in the latest CV.' },
-  { label: 'degrees in double-degree path', value: 2, suffix: '', description: 'The current academic path combines a State Engineer Degree and a French Master 2 in applied AI.' },
+  { label: 'selected projects', value: 9, suffix: '', description: 'I selected nine projects across AI, data, full-stack engineering, and cybersecurity.' },
+  { label: 'countries in experience', value: 3, suffix: '', description: 'I have professional experience in France, Tunisia, and Niger.' },
+  { label: 'certifications', value: 5, suffix: '', description: 'I hold five credentials across cloud AI, data, agile methods, and front-end development.' },
+  { label: 'degrees in double-degree path', value: 2, suffix: '', description: 'I am pursuing a State Engineer Degree and a French Master 2 in applied AI.' },
 ];
 
 const summaryCards = [
-  { title: 'Profile', icon: <BriefcaseBusiness size={22} />, description: 'Double-degree candidate in AI, Data Science, and applied artificial intelligence.', detail: 'The profile combines an engineering degree at EMSI with a Master 2 MIAGE AI at Université Côte d’Azur, alongside international software-development experience.' },
-  { title: 'Education', icon: <GraduationCap size={22} />, description: 'A double-degree path supported by a foundation in software engineering.', detail: 'The current path brings together the State Engineer Degree in AI & Data Science (2025–2027) and Master 2 MIAGE AI2 — Applied AI (2026–2027).' },
-  { title: 'Focus', icon: <Target size={22} />, description: 'Generative AI, machine learning, computer vision, and production-minded engineering.', detail: 'Current technical interests include LLMs, RAG, agentic AI, deep learning, computer vision, MLOps, and data-driven products.' },
+  { title: 'Profile', icon: <BriefcaseBusiness size={22} />, description: 'I am pursuing a double degree in AI, Data Science, and applied artificial intelligence.', detail: 'I combine an engineering degree at EMSI with a Master 2 MIAGE AI at Université Côte d’Azur and international software-development experience.' },
+  { title: 'Education', icon: <GraduationCap size={22} />, description: 'I am combining two degrees with a foundation in software engineering.', detail: 'I am pursuing a State Engineer Degree in AI & Data Science (2025–2027) and a Master 2 MIAGE AI2 — Applied AI (2026–2027).' },
+  { title: 'Focus', icon: <Target size={22} />, description: 'I focus on generative AI, machine learning, computer vision, and production-minded engineering.', detail: 'My current technical interests include LLMs, RAG, agentic AI, deep learning, computer vision, MLOps, and data-driven products.' },
 ];
 
 const awardDetail = {
   eyebrow: 'Recognition',
   title: 'Silver medal — EMSI Innovation AI TechForGood Hackathon 2026',
   icon: <Trophy size={28} />,
-  summary: 'A silver-medal result at the 2026 EMSI Innovation AI TechForGood Hackathon.',
-  sections: [{ title: 'Recognition', body: 'The latest CV identifies this as a silver medal in the EMSI Innovation AI TechForGood Hackathon 2026.' }],
+  summary: 'I earned a silver medal at the 2026 EMSI Innovation AI TechForGood Hackathon.',
+  sections: [{ title: 'Recognition', body: 'I received the silver medal at the EMSI Innovation AI TechForGood Hackathon 2026.' }],
 };
 
 const entrepreneurshipDetail = {
   eyebrow: 'Entrepreneurial experience · 2026–Present',
   title: 'Founder & CEO — Salam Tech Africa',
   icon: <BriefcaseBusiness size={28} />,
-  summary: 'A technology startup dedicated to digital solutions and innovation in Africa.',
+  summary: 'I founded a technology startup focused on digital solutions and innovation in Africa.',
   sections: [
-    { title: 'Focus', body: 'Salam Tech Africa works on digital solutions and innovation, with a focus on product design and project development.' },
-    { title: 'Role', body: 'Founder and CEO, with responsibility for team leadership.' },
+    { title: 'Focus', body: 'At Salam Tech Africa, I work on product design, project development, and digital innovation.' },
+    { title: 'Role', body: 'As Founder and CEO, I lead the team and guide project delivery.' },
   ],
 };
 
@@ -354,9 +354,9 @@ const authorDetail = {
   eyebrow: 'Author & community',
   title: 'Le Codeur de Niamey',
   icon: <BookOpen size={28} />,
-  summary: 'Published author with interests in reading, public speaking, and sport.',
+  summary: 'I am a published author, and I enjoy reading, public speaking, and sport.',
   sections: [
-    { title: 'Publication', body: 'The latest CV identifies Le Codeur de Niamey as a published work and notes publication and communication around the book.' },
+    { title: 'Publication', body: 'I wrote Le Codeur de Niamey and take part in communicating about the book.' },
     { title: 'Interests', items: ['Reading', 'Public speaking', 'Sport'] },
   ],
 };
@@ -615,7 +615,7 @@ function App() {
               <h3>Founder & CEO — Salam Tech Africa</h3>
             </div>
             <p>
-              Technology startup focused on digital solutions and innovation in Africa, from product design to project delivery and team leadership.
+              I founded Salam Tech Africa to build digital solutions and lead technology projects focused on innovation in Africa.
             </p>
             <DetailHint />
           </div>
@@ -750,7 +750,7 @@ function App() {
               <span className="section-kicker">Author</span>
               <h3>Le Codeur de Niamey</h3>
               <p>
-                Published author of <strong>Le Codeur de Niamey</strong>, with interests in reading, public speaking, and sport.
+                I wrote <strong>Le Codeur de Niamey</strong> and enjoy reading, public speaking, and sport.
               </p>
               <DetailHint />
             </div>
