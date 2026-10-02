@@ -238,23 +238,23 @@ const projects = [
   },
   {
     id: 'mongodb-library-system',
-    title: 'MongoDB Library Management System',
+    title: 'Library Management System',
     category: 'Full-Stack',
-    tech: 'MongoDB • Node.js • React',
-    metric: 'Data-driven app',
-    summary: 'I helped build a MongoDB library platform for catalog, member, and lending workflows.',
-    description: 'I contributed to a full-stack library application that brings book management, member records, and borrowing workflows together. I worked across the data model, application logic, and user-facing interface.',
-    context: 'I helped create a practical, data-driven application for everyday library administration.',
-    role: 'I contributed to both the back-end logic and the front-end interface to support users and administrators in daily operations.',
+    tech: 'Flask • MongoDB • Bootstrap',
+    metric: 'Library operations',
+    summary: 'I built a Flask and MongoDB web app for managing books, members, loans, returns, and library statistics.',
+    description: 'I built a library management application with a Flask backend and MongoDB database. It supports common library workflows, from managing the catalog and members to recording loans and returns.',
+    context: 'I developed this project as a NoSQL web application for day-to-day library administration.',
+    role: 'I implemented the application and its book, member, lending, and statistics workflows.',
     contributions: [
-      'Designed the data model for books, users, and loans using MongoDB.',
-      'Built the application logic for catalog management and borrowing processes.',
-      'Developed a user-friendly interface for operational tasks and tracking.',
-      'Structured the system to support easy maintenance and data expansion.'
+      'Implemented create, list, and update workflows for books.',
+      'Added member management and book-loan and return workflows.',
+      'Connected the application to MongoDB for NoSQL data storage.',
+      'Added statistics for books, members, and loans.'
     ],
-    techStack: ['MongoDB', 'Node.js', 'Express.js', 'React', 'JavaScript', 'REST API', 'NoSQL modeling', 'Bootstrap or CSS', 'Authentication flow'],
-    results: ['Centralized library operations in one platform', 'Realistic data-driven workflow for resource management', 'Strong example of full-stack application design'],
-    githubUrl: '[ADD: GitHub repository link]',
+    techStack: ['Python', 'Flask', 'MongoDB', 'Bootstrap', 'NoSQL', 'Book catalog', 'Member records', 'Loans and returns'],
+    results: ['Book and member management in one application', 'Loan and return tracking', 'Library statistics for books, members, and loans'],
+    githubUrl: 'https://github.com/idodo-t/library_management_system',
     demoUrl: '[ADD: app demo or screenshots link]',
     icon: <Layout size={22} />,
   },
@@ -302,6 +302,48 @@ const projects = [
     demoUrl: '[ADD: demo or screenshots link]',
     icon: <Building2 size={22} />,
   },
+  {
+    id: 'fellah-ai',
+    title: 'Fellah AI — WhatsApp Farming Assistant',
+    category: 'AI',
+    tech: 'FastAPI • Twilio • YOLOv8',
+    metric: 'AgriTech assistant',
+    summary: 'I am developing a WhatsApp assistant for crop recommendations, farm forecasts, plant-image analysis, and Darija voice support.',
+    description: 'I am building an agricultural assistant around WhatsApp interactions. It connects farmer messages to crop recommendations and farm-economics tools, and supports plant-image analysis and Darija audio conversations.',
+    context: 'I designed the project to make agricultural guidance accessible through familiar messaging and voice workflows.',
+    role: 'I developed the FastAPI webhook and the services that process messages, crop recommendations, farm forecasts, images, and voice.',
+    contributions: [
+      'Connected incoming WhatsApp messages and media through Twilio webhooks.',
+      'Implemented a crop recommender that uses planting seasons and estimated profit to rank options.',
+      'Added profit calculations and an eight-week cash-flow forecast with an advance alert.',
+      'Built services for plant-image disease analysis and Darija voice responses.'
+    ],
+    techStack: ['Python', 'FastAPI', 'Twilio', 'SQLAlchemy', 'Ultralytics / YOLOv8', 'Google GenAI', 'gTTS', 'WhatsApp webhooks'],
+    results: ['WhatsApp support for text, image, and audio messages', 'Seasonal crop recommendations ranked by estimated profit', 'Eight-week cash-flow forecasting', 'Plant-image analysis and Darija voice support'],
+    githubUrl: 'https://github.com/idodo-t/fellah-ai',
+    icon: <Bot size={22} />,
+  },
+  {
+    id: 'mlops-iris-pipeline',
+    title: 'Iris Classification Training Pipeline',
+    category: 'Data',
+    tech: 'Python • Scikit-learn • Pandas',
+    metric: 'MLOps learning project',
+    summary: 'I wrote a small reproducible training pipeline that fits and saves a Random Forest classifier for the Iris dataset.',
+    description: 'I use scikit-learn to load the Iris dataset, split it into training and test sets, and train a 100-tree Random Forest classifier. The script serializes the trained model to a local artifact.',
+    context: 'I created this compact repository as a hands-on exercise in model training and environment setup.',
+    role: 'I wrote the training pipeline and the Conda environment specification.',
+    contributions: [
+      'Loaded the Iris dataset with scikit-learn and prepared features and labels.',
+      'Split the data into training and test sets with a fixed random seed.',
+      'Trained a Random Forest classifier and saved it as a pickle artifact.',
+      'Defined a Conda environment with Python, Pandas, and Scikit-learn.'
+    ],
+    techStack: ['Python', 'Pandas', 'Scikit-learn', 'Random Forest', 'Conda', 'Pickle'],
+    results: ['Repeatable Iris training pipeline', 'Saved model at models/iris_model.pkl', 'Documented Conda environment for setup'],
+    githubUrl: 'https://github.com/idodo-t/mlops-tp1-tutorial',
+    icon: <Cpu size={22} />,
+  },
 ];
 
 const skills = [
@@ -319,7 +361,7 @@ const skills = [
 ];
 
 const stats = [
-  { label: 'selected projects', value: 9, suffix: '', description: 'I selected nine projects across AI, data, full-stack engineering, and cybersecurity.' },
+  { label: 'selected projects', value: projects.length, suffix: '', description: `I currently feature ${projects.length} projects across AI, data, full-stack engineering, and cybersecurity.` },
   { label: 'countries in experience', value: 3, suffix: '', description: 'I have professional experience in France, Tunisia, and Niger.' },
   { label: 'certifications', value: 5, suffix: '', description: 'I hold five credentials across cloud AI, data, agile methods, and front-end development.' },
   { label: 'degrees in double-degree path', value: 2, suffix: '', description: 'I am pursuing a State Engineer Degree and a French Master 2 in applied AI.' },

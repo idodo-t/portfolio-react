@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 jest.mock('@vercel/analytics/react', () => ({ Analytics: () => null }), { virtual: true });
 
 import App from './App';
@@ -32,4 +32,12 @@ test('opens skill details and closes them with Escape', () => {
 
   fireEvent.keyDown(window, { key: 'Escape' });
   expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+
+  fireEvent.click(screen.getByRole('button', { name: /Fellah AI — WhatsApp Farming Assistant/ }));
+  const projectDialog = screen.getByRole('dialog');
+  expect(within(projectDialog).getByRole('link', { name: 'GitHub' })).toHaveAttribute('href', 'https://github.com/idodo-t/fellah-ai');
+
+  fireEvent.keyDown(window, { key: 'Escape' });
+  fireEvent.click(screen.getByRole('button', { name: /Malware Detection via CNN/ }));
+  expect(within(screen.getByRole('dialog')).queryByRole('link', { name: 'GitHub' })).not.toBeInTheDocument();
 });
