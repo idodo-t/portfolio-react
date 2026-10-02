@@ -1,11 +1,13 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import {
   ArrowRight,
+  ArrowUpRight,
   BarChart3,
   Bot,
   BrainCircuit,
   BriefcaseBusiness,
   Building2,
+  BookOpen,
   CalendarRange,
   CheckCircle2,
   Cpu,
@@ -31,57 +33,73 @@ import { Analytics } from '@vercel/analytics/react';
 const cvPath = `${process.env.PUBLIC_URL}/Cv_AbdoulSalam_dodoTahirou.pdf`;
 const myEmail = 'dodotahirouabdoulsalam2003@gmail.com';
 const linkedinUrl = 'https://www.linkedin.com/in/idodo12';
-const githubUrl = 'https://github.com/';
-const photoPath = '/maphoto.png';
+const githubUrl = 'https://github.com/idodo-t';
+const photoPath = `${process.env.PUBLIC_URL}/maphoto.png`;
 
 const experience = [
   {
-    title: 'Data & Innovation Engineering Intern',
+    title: 'Software Development Intern',
     company: 'France Monceau',
-    location: 'Paris, France (remote)',
-    period: 'since July 2026',
-    description: 'Development of an intelligent e-commerce platform including online store, CRM, call center and AI-based decision support tools.',
+    location: 'Paris, France (remote, part-time)',
+    period: 'Since July 2026',
+    description: 'Part-time remote role focused on an intelligent e-commerce product and AI-supported business operations.',
+    responsibilities: [
+      'Developed an e-commerce platform integrating an online store, CRM, and call-center workflows.',
+      'Integrated AI-based decision-support solutions into the product.',
+    ],
   },
   {
     title: 'Software Development Intern',
     company: '3LM Solutions',
-    location: 'Bizerte, Tunisia (remote)',
-    period: 'since July 2026',
-    description: 'CRM development, call center module, business interface and contribution to mobile application development.',
+    location: 'Bizerte, Tunisia (remote, part-time)',
+    period: 'Since July 2026',
+    description: 'Part-time remote software role spanning CRM workflows, a call-center module, and mobile product development.',
+    responsibilities: [
+      'Developed a CRM, a call-center module, and a business interface.',
+      'Contributed to mobile application development.',
+    ],
   },
   {
-    title: 'Software Engineering Intern',
+    title: 'Software Engineer',
     company: 'Technorium Company',
     location: 'Niamey, Niger',
     period: 'Aug–Oct 2024',
-    description: 'Front-end and back-end development with JavaScript and Java, along with system script optimization and team collaboration.',
+    description: 'Software engineering experience combining front-end and back-end development, system scripting, and Agile teamwork.',
+    responsibilities: [
+      'Built front-end and back-end features with JavaScript and Java.',
+      'Optimized system scripts and collaborated within an Agile team.',
+    ],
   },
 ];
 
 const education = [
   {
-    title: 'Master 2 MIAGE IA2 — Applied AI',
+    title: 'Master 2 MIAGE AI2 — Applied AI',
     school: 'Université Côte d’Azur, France',
     period: '2026–2027',
-    note: 'Dual degree — program held in Morocco',
+    note: 'Double degree, delivered in Morocco',
+    description: 'French national Master 2 in applied AI, pursued as part of a double-degree path and delivered in Morocco.',
   },
   {
-    title: 'State Engineering Degree — Computer Science & Networks, spec. AI & Data Science',
+    title: 'State Engineer Degree — Artificial Intelligence & Data Science',
     school: 'EMSI, Rabat',
-    period: 'En Cours',
-    note: '',
+    period: '2025–2027',
+    note: 'Bac+5 engineering degree',
+    description: 'State engineering degree in Artificial Intelligence and Data Science at EMSI in Rabat.',
   },
   {
     title: "Bachelor's Degree — Software Engineering",
     school: 'FST Errachidia',
     period: '2023–2024',
-    note: '',
+    note: 'FST Errachidia, Moulay Ismaïl University',
+    description: 'Undergraduate degree in Software Engineering completed at FST Errachidia, Moulay Ismaïl University.',
   },
   {
     title: 'DEUST — Math, CS & Physics',
     school: 'FST Errachidia',
     period: '2021–2023',
-    note: '',
+    note: 'FST Errachidia, Moulay Ismaïl University',
+    description: 'Two-year diploma covering Mathematics, Computer Science, and Physics.',
   },
 ];
 
@@ -287,20 +305,61 @@ const projects = [
 ];
 
 const skills = [
-  { label: 'Advanced AI', values: ['LLM', 'RAG', 'Agentic AI', 'LangChain', 'Prompt Engineering'] },
-  { label: 'Deep Learning', values: ['CNN', 'TensorFlow', 'Scikit-learn', 'Computer Vision'] },
-  { label: 'Full-Stack', values: ['React', 'React Native', 'Node.js', 'JavaScript', 'Java', 'C/C++', 'PHP'] },
-  { label: 'Data & Cloud', values: ['MongoDB', 'MySQL', 'PostgreSQL', 'BI', 'ETL', 'Oracle Cloud Infrastructure'] },
-  { label: 'Certifications', values: ['OCI AI Foundations Associate (2026)', 'Intro to Big Data', 'Agile Project Management', 'React Native', 'React Basics'] },
-  { label: 'Languages', values: ['English (advanced)', 'French (native)', 'Hausa (native)', 'Zarma (native)', 'Darija (basic)'] },
+  { label: 'Generative & Agentic AI', icon: <Bot size={22} />, summary: 'Building language-model applications that combine retrieval, agents, prompting, and model adaptation.', details: 'The CV highlights practical focus across generative AI, retrieval-augmented generation, agentic workflows, and fine-tuning.', values: ['LLMs', 'RAG', 'Agentic AI', 'LangChain', 'Hugging Face', 'Prompt engineering', 'Fine-tuning', 'Generative AI'] },
+  { label: 'Machine Learning & Deep Learning', icon: <BrainCircuit size={22} />, summary: 'Model development and data preparation for classification and predictive machine-learning tasks.', details: 'The toolkit spans deep-learning frameworks, classical machine learning, numerical computing, data analysis, and GPU-accelerated workflows.', values: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'CNN', 'NumPy', 'Pandas', 'Advanced ML (R)', 'GPU-accelerated ML'] },
+  { label: 'Computer Vision & NLP', icon: <Target size={22} />, summary: 'Visual recognition and language-processing foundations for applied AI products.', details: 'Computer-vision work includes CNN-based classification and YOLOv8 object detection; the CV also lists Natural Language Processing.', values: ['Computer Vision', 'CNN', 'YOLOv8', 'Natural Language Processing'] },
+  { label: 'MLOps & Deployment', icon: <Server size={22} />, summary: 'Tools for packaging, serving, tracking, and deploying machine-learning applications.', details: 'The deployment toolkit includes API development, experiment tracking, environment management, version control, containers, and CI/CD.', values: ['Docker', 'Git / GitHub', 'CI/CD', 'FastAPI', 'MLflow', 'Conda', 'AI application deployment'] },
+  { label: 'Data & Databases', icon: <Database size={22} />, summary: 'Relational and NoSQL data systems, business intelligence, and data integration.', details: 'The CV lists SQL and MongoDB alongside Big Data concepts, BI, and ETL workflows for analytical and operational use cases.', values: ['SQL', 'MySQL', 'MongoDB', 'Big Data', 'BI', 'ETL'] },
+  { label: 'Optimization & Reasoning', icon: <Cpu size={22} />, summary: 'Methods for structured decision-making and intelligent systems.', details: 'The profile includes combinatorial optimization, reactive AI, automated reasoning, and decision management.', values: ['Combinatorial optimization', 'Reactive AI', 'Automated reasoning', 'Decision management'] },
+  { label: 'Programming Languages', icon: <Layout size={22} />, summary: 'A broad programming foundation across application, systems, and AI development.', details: 'Languages listed in the CV include Python, C-family languages, Java, PHP, and JavaScript.', values: ['Python', 'C++', 'C', 'C# .NET', 'Java', 'PHP', 'JavaScript'] },
+  { label: 'Web & Mobile', icon: <Layout size={22} />, summary: 'Web and mobile application development across modern JavaScript and mobile stacks.', details: 'The CV lists experience and tools across React, React Native, Node.js, Kotlin, and Flutter.', values: ['React', 'React Native', 'Node.js', 'Kotlin', 'Flutter'] },
+  { label: 'Cloud & Systems', icon: <Shield size={22} />, summary: 'Cloud foundations, Linux administration, connected devices, and cybersecurity.', details: 'The systems profile combines Oracle Cloud Infrastructure with Linux, MQTT-based IoT, and cybersecurity.', values: ['Oracle Cloud (OCI)', 'Linux', 'IoT (MQTT)', 'Cybersecurity'] },
+  { label: 'Certifications', icon: <CheckCircle2 size={22} />, summary: 'Five credentials covering cloud AI, data, agile methods, and front-end development.', details: 'The latest CV lists one dated Oracle certification and four additional course credentials.', values: ['OCI AI Foundations Associate (2026)', 'Introduction to Big Data', 'Agile Project Management', 'React Native', 'React Basics'] },
+  { label: 'Languages & Mobility', icon: <MapPin size={22} />, summary: 'Multilingual communication and a Category B driving licence.', details: 'French and Hausa are listed as native languages; English is advanced, with Zarma and Darija also included.', values: ['French (native)', 'English (advanced)', 'Hausa (native)', 'Zarma (native)', 'Darija (basic)', 'Driving licence: Category B'] },
 ];
 
 const stats = [
-  { label: 'project outcomes', value: 12, suffix: '+' },
-  { label: 'AI & Data projects', value: 96, suffix: '%' },
-  { label: 'certifications', value: 5, suffix: '' },
-  { label: 'years of learning', value: 6, suffix: '+' },
+  { label: 'selected projects', value: 9, suffix: '', description: 'Nine featured projects are presented across AI, data, full-stack engineering, and cybersecurity.' },
+  { label: 'countries in experience', value: 3, suffix: '', description: 'Professional experience spans France, Tunisia, and Niger.' },
+  { label: 'certifications', value: 5, suffix: '', description: 'Five certifications and course credentials are listed in the latest CV.' },
+  { label: 'degrees in double-degree path', value: 2, suffix: '', description: 'The current academic path combines a State Engineer Degree and a French Master 2 in applied AI.' },
 ];
+
+const summaryCards = [
+  { title: 'Profile', icon: <BriefcaseBusiness size={22} />, description: 'Double-degree candidate in AI, Data Science, and applied artificial intelligence.', detail: 'The profile combines an engineering degree at EMSI with a Master 2 MIAGE AI at Université Côte d’Azur, alongside international software-development experience.' },
+  { title: 'Education', icon: <GraduationCap size={22} />, description: 'A double-degree path supported by a foundation in software engineering.', detail: 'The current path brings together the State Engineer Degree in AI & Data Science (2025–2027) and Master 2 MIAGE AI2 — Applied AI (2026–2027).' },
+  { title: 'Focus', icon: <Target size={22} />, description: 'Generative AI, machine learning, computer vision, and production-minded engineering.', detail: 'Current technical interests include LLMs, RAG, agentic AI, deep learning, computer vision, MLOps, and data-driven products.' },
+];
+
+const awardDetail = {
+  eyebrow: 'Recognition',
+  title: 'Silver medal — EMSI Innovation AI TechForGood Hackathon 2026',
+  icon: <Trophy size={28} />,
+  summary: 'A silver-medal result at the 2026 EMSI Innovation AI TechForGood Hackathon.',
+  sections: [{ title: 'Recognition', body: 'The latest CV identifies this as a silver medal in the EMSI Innovation AI TechForGood Hackathon 2026.' }],
+};
+
+const entrepreneurshipDetail = {
+  eyebrow: 'Entrepreneurial experience · 2026–Present',
+  title: 'Founder & CEO — Salam Tech Africa',
+  icon: <BriefcaseBusiness size={28} />,
+  summary: 'A technology startup dedicated to digital solutions and innovation in Africa.',
+  sections: [
+    { title: 'Focus', body: 'Salam Tech Africa works on digital solutions and innovation, with a focus on product design and project development.' },
+    { title: 'Role', body: 'Founder and CEO, with responsibility for team leadership.' },
+  ],
+};
+
+const authorDetail = {
+  eyebrow: 'Author & community',
+  title: 'Le Codeur de Niamey',
+  icon: <BookOpen size={28} />,
+  summary: 'Published author with interests in reading, public speaking, and sport.',
+  sections: [
+    { title: 'Publication', body: 'The latest CV identifies Le Codeur de Niamey as a published work and notes publication and communication around the book.' },
+    { title: 'Interests', items: ['Reading', 'Public speaking', 'Sport'] },
+  ],
+};
 
 const projectFilters = ['All', 'AI', 'Full-Stack', 'Data', 'Cybersecurity'];
 
@@ -323,7 +382,7 @@ const leadershipEntries = [
   {
     title: 'President and Vice-President',
     org: 'Association of the African fraternity in Errachidia (AFAE)',
-    period: '2022 – 2024',
+    period: '2021 – 2024',
     summary: 'I was appointed Vice President of the African Students Association in Errachidia and later led the association through a period of growth and community mobilization.',
     description: 'Right at the beginning of my first academic year at FST Errachidia, I was appointed Vice President of the Association La Fraternité Africaine a Errachidia. During this year I learned to create the conditions to bring together the different student communities, especially the sub-Saharan communities. In 2022, I was elected president of this association and had the opportunity to meet the highest authorities of the city of Errachidia. We organized a lot of events especially during the months of Ramadan and the holidays. We had adopted a posture of unity of all Africans together. It has been a great experience because it earned me a re-election to the following year.',
     impact: 'This leadership experience strengthened my ability to organize communities, support cultural inclusion, and manage collective initiatives with a strong social purpose.',
@@ -338,7 +397,7 @@ const leadershipEntries = [
   {
     title: 'Active Member',
     org: 'CESAM / Student and Community Networks',
-    period: '2021 – Present',
+    period: '2021 – 2026',
     summary: 'I remain active in student and community networks where I contribute to collaboration, engagement, and social impact initiatives.',
     description: 'I am involved in student and community initiatives where leadership, exchange, and solidarity are central. These roles allow me to stay connected to collective action and support student life beyond the classroom.',
     impact: 'These engagements helped me develop a strong sense of responsibility, team coordination, and social commitment within my academic environment.',
@@ -358,20 +417,22 @@ function App() {
   const [counts, setCounts] = useState({ 0: 0, 1: 0, 2: 0, 3: 0 });
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedLeadership, setSelectedLeadership] = useState(null);
+  const [selectedDetail, setSelectedDetail] = useState(null);
 
   useEffect(() => {
-    if (!selectedProject && !selectedLeadership) return undefined;
+    if (!selectedProject && !selectedLeadership && !selectedDetail) return undefined;
 
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
         setSelectedProject(null);
         setSelectedLeadership(null);
+        setSelectedDetail(null);
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedProject, selectedLeadership]);
+  }, [selectedProject, selectedLeadership, selectedDetail]);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -458,20 +519,13 @@ function App() {
           <div className="container hero-grid">
             <div className="profile-card reveal">
               <div className="profile-glow" />
-              <img
-                src={photoPath}
-                alt="Dodo Tahirou Abdoul Salam"
-                onError={(e) => {
-                  if (!e.target.src.includes('maphoto.jpeg')) e.target.src = '/maphoto.jpeg';
-                  else if (!e.target.src.includes('maphoto.jpg')) e.target.src = '/maphoto.jpg';
-                }}
-              />
+                <img src={photoPath} alt="Dodo Tahirou Abdoul Salam" />
             </div>
 
             <div className="hero-copy reveal">
               <div className="badge-row">
-                <span className="badge badge-gold"><Trophy size={14} /> Silver Medal — EMSI Innovation AI TechForGood Hackathon 2026</span>
-                <span className="badge badge-blue"><Sparkles size={14} /> Double Degree — EMSI × Université Côte d’Azur</span>
+                <button type="button" className="badge badge-gold detail-badge" onClick={() => setSelectedDetail(awardDetail)} aria-haspopup="dialog"><Trophy size={14} /> Silver Medal — EMSI Innovation AI TechForGood Hackathon 2026</button>
+                <button type="button" className="badge badge-blue detail-badge" onClick={() => setSelectedDetail({ eyebrow: 'Academic path', title: 'Double degree — EMSI × Université Côte d’Azur', icon: <GraduationCap size={28} />, summary: 'A State Engineer Degree in AI & Data Science combined with a French Master 2 in applied AI.', sections: [{ title: 'State Engineer Degree', body: 'Artificial Intelligence & Data Science at EMSI, Rabat · 2025–2027.' }, { title: 'Master 2', body: 'MIAGE AI2 — Applied AI at Université Côte d’Azur · 2026–2027.' }] })} aria-haspopup="dialog"><Sparkles size={14} /> Double Degree — EMSI × Université Côte d’Azur</button>
               </div>
 
               <h1>
@@ -479,7 +533,7 @@ function App() {
               </h1>
 
               <p className="lead">
-                Double Degree Candidate specializing in AI & Data Science (EMSI) and Applied Artificial Intelligence (Master 2 MIAGE, Université Côte d’Azur). Focused on LLM, RAG, Agentic AI, Deep Learning and Computer Vision.
+                Double-degree candidate in AI & Data Science and applied AI, with international software experience and a focus on generative AI, machine learning, and production-minded product development.
               </p>
 
               <div className="availability-box">
@@ -513,21 +567,22 @@ function App() {
 
         <section id="about" className="quick-summary section-spacing gradient-panel">
           <div className="container summary-grid">
-            <div className="summary-card reveal">
-              <BriefcaseBusiness size={22} />
-              <h3>Profile</h3>
-              <p>AI/Data Science engineer in training with a strong interest in LLMs, computer vision, intelligent systems and applied decision support.</p>
-            </div>
-            <div className="summary-card reveal">
-              <GraduationCap size={22} />
-              <h3>Education</h3>
-              <p>Double degree candidate in AI & Data Science and Applied Artificial Intelligence with a strong academic foundation in software engineering.</p>
-            </div>
-            <div className="summary-card reveal">
-              <Target size={22} />
-              <h3>Focus</h3>
-              <p>LLM, RAG, Agentic AI, Deep Learning, Computer Vision, and data-driven product engineering for real-world impact.</p>
-            </div>
+            {summaryCards.map((card) => (
+              <article
+                className="summary-card reveal interactive-card"
+                key={card.title}
+                role="button"
+                tabIndex={0}
+                aria-haspopup="dialog"
+                onClick={() => setSelectedDetail({ eyebrow: 'Profile', title: card.title, icon: card.icon, summary: card.description, sections: [{ title: 'Overview', body: card.detail }] })}
+                onKeyDown={(event) => handleCardKeyDown(event, () => setSelectedDetail({ eyebrow: 'Profile', title: card.title, icon: card.icon, summary: card.description, sections: [{ title: 'Overview', body: card.detail }] }))}
+              >
+                {card.icon}
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+                <DetailHint />
+              </article>
+            ))}
           </div>
         </section>
 
@@ -536,21 +591,33 @@ function App() {
             <SectionHeader eyebrow="Career" title="Experience & impact" description="Professional exposure across software engineering, AI projects and digital product delivery." />
             <div className="timeline timeline-experience">
               {experience.map((item) => (
-                <TimelineItem key={item.company + item.period} item={item} />
+                <TimelineItem
+                  key={item.company + item.period}
+                  item={item}
+                  onOpen={() => setSelectedDetail({ eyebrow: 'Professional experience', title: item.title, subtitle: `${item.company} · ${item.period}`, icon: <BriefcaseBusiness size={28} />, summary: item.description, sections: [{ title: 'Responsibilities', items: item.responsibilities }, { title: 'Location', body: item.location }] })}
+                />
               ))}
             </div>
           </div>
         </section>
 
         <section className="section-spacing entrepreneur-panel">
-          <div className="container entrepreneur-wrap reveal">
+          <div
+            className="container entrepreneur-wrap reveal interactive-card"
+            role="button"
+            tabIndex={0}
+            aria-haspopup="dialog"
+            onClick={() => setSelectedDetail(entrepreneurshipDetail)}
+            onKeyDown={(event) => handleCardKeyDown(event, () => setSelectedDetail(entrepreneurshipDetail))}
+          >
             <div className="entrepreneur-header">
               <span className="section-kicker">Entrepreneurship</span>
               <h3>Founder & CEO — Salam Tech Africa</h3>
             </div>
             <p>
-              Tech startup dedicated to digital solutions and innovation in Africa, combining product thinking, technology and pragmatic impact for underserved ecosystems.
+              Technology startup focused on digital solutions and innovation in Africa, from product design to project delivery and team leadership.
             </p>
+            <DetailHint />
           </div>
         </section>
 
@@ -559,7 +626,11 @@ function App() {
             <SectionHeader eyebrow="Education" title="Academic path" description="An academic journey built around AI, data engineering, software design and applied intelligence." />
             <div className="timeline timeline-education">
               {education.map((item) => (
-                <EducationItem key={item.title} item={item} />
+                <EducationItem
+                  key={item.title}
+                  item={item}
+                  onOpen={() => setSelectedDetail({ eyebrow: 'Education', title: item.title, subtitle: `${item.school} · ${item.period}`, icon: <GraduationCap size={28} />, summary: item.description, sections: [{ title: 'Program details', body: item.note || item.title }, { title: 'Institution', body: item.school }] })}
+                />
               ))}
             </div>
           </div>
@@ -596,14 +667,36 @@ function App() {
 
             <div className="skills-grid">
               {skills.map((skill) => (
-                <div className="skill-card reveal" key={skill.label}>
-                  <h3>{skill.label}</h3>
+                <article
+                  className="skill-card reveal interactive-card"
+                  key={skill.label}
+                  role="button"
+                  tabIndex={0}
+                  aria-haspopup="dialog"
+                  onClick={() => setSelectedDetail({
+                    eyebrow: 'Skill profile',
+                    title: skill.label,
+                    icon: skill.icon,
+                    summary: skill.summary,
+                    sections: [{ title: 'Area explained', body: skill.details }, { title: 'Tools and topics', tags: skill.values }],
+                  })}
+                  onKeyDown={(event) => handleCardKeyDown(event, () => setSelectedDetail({
+                    eyebrow: 'Skill profile',
+                    title: skill.label,
+                    icon: skill.icon,
+                    summary: skill.summary,
+                    sections: [{ title: 'Area explained', body: skill.details }, { title: 'Tools and topics', tags: skill.values }],
+                  }))}
+                >
+                  <div className="skill-card-heading">{skill.icon}<h3>{skill.label}</h3></div>
+                  <p className="skill-summary">{skill.summary}</p>
                   <div className="tag-list">
                     {skill.values.map((value) => (
                       <span key={value} className="tag">{value}</span>
                     ))}
                   </div>
-                </div>
+                  <DetailHint />
+                </article>
               ))}
             </div>
           </div>
@@ -612,13 +705,23 @@ function App() {
         <section className="section-spacing stats-panel">
           <div className="container stats-grid">
             {stats.map((stat, index) => (
-              <div className="stat-card reveal" key={stat.label} data-index={index}>
+              <article
+                className="stat-card reveal interactive-card"
+                key={stat.label}
+                data-index={index}
+                role="button"
+                tabIndex={0}
+                aria-haspopup="dialog"
+                onClick={() => setSelectedDetail({ eyebrow: 'Portfolio at a glance', title: stat.label, icon: <BarChart3 size={28} />, summary: `${stat.value}${stat.suffix} ${stat.label}`, sections: [{ title: 'What this represents', body: stat.description }] })}
+                onKeyDown={(event) => handleCardKeyDown(event, () => setSelectedDetail({ eyebrow: 'Portfolio at a glance', title: stat.label, icon: <BarChart3 size={28} />, summary: `${stat.value}${stat.suffix} ${stat.label}`, sections: [{ title: 'What this represents', body: stat.description }] }))}
+              >
                 <strong>
                   {counts[index] || 0}
                   {stat.suffix}
                 </strong>
                 <span>{stat.label}</span>
-              </div>
+                <DetailHint />
+              </article>
             ))}
           </div>
         </section>
@@ -635,13 +738,21 @@ function App() {
         </section>
 
         <section className="section-spacing author-section">
-          <div className="container author-wrap reveal">
+          <div
+            className="container author-wrap reveal interactive-card"
+            role="button"
+            tabIndex={0}
+            aria-haspopup="dialog"
+            onClick={() => setSelectedDetail(authorDetail)}
+            onKeyDown={(event) => handleCardKeyDown(event, () => setSelectedDetail(authorDetail))}
+          >
             <div className="author-content">
               <span className="section-kicker">Author</span>
               <h3>Le Codeur de Niamey</h3>
               <p>
-                Author of the novel <strong>Le Codeur de Niamey</strong> by Albarkeyzé Dan Mallam, about an African youth building an AI tool and navigating the intersection between technology, ambition and identity.
+                Published author of <strong>Le Codeur de Niamey</strong>, with interests in reading, public speaking, and sport.
               </p>
+              <DetailHint />
             </div>
           </div>
         </section>
@@ -735,21 +846,21 @@ function App() {
                   </ul>
                 </div>
 
-                <div className="project-modal-section">
+                {((selectedProject.githubUrl && selectedProject.githubUrl.startsWith('https://')) || (selectedProject.demoUrl && selectedProject.demoUrl.startsWith('https://'))) && <div className="project-modal-section">
                   <h4>Links</h4>
                   <div className="project-modal-links">
-                    {selectedProject.githubUrl && (
+                    {selectedProject.githubUrl && selectedProject.githubUrl.startsWith('https://') && (
                       <a href={selectedProject.githubUrl} target="_blank" rel="noreferrer" className="button button-secondary small-button">
                         GitHub
                       </a>
                     )}
-                    {selectedProject.demoUrl && (
+                    {selectedProject.demoUrl && selectedProject.demoUrl.startsWith('https://') && (
                       <a href={selectedProject.demoUrl} target="_blank" rel="noreferrer" className="button button-ghost small-button">
                         Demo
                       </a>
                     )}
                   </div>
-                </div>
+                </div>}
               </div>
             </div>
           </div>
@@ -816,6 +927,8 @@ function App() {
         </div>
       )}
 
+      {selectedDetail && <DetailModal detail={selectedDetail} onClose={() => setSelectedDetail(null)} />}
+
       <footer className="site-footer">
         <div className="container footer-inner">
           <span>© {new Date().getFullYear()} Dodo Tahirou Abdoul Salam</span>
@@ -838,31 +951,33 @@ function SectionHeader({ eyebrow, title, description }) {
   );
 }
 
-function TimelineItem({ item }) {
+function TimelineItem({ item, onOpen }) {
   return (
     <div className="timeline-item reveal">
       <div className="timeline-dot" />
-      <div className="timeline-card">
+      <article className="timeline-card interactive-card" role="button" tabIndex={0} aria-haspopup="dialog" onClick={onOpen} onKeyDown={(event) => handleCardKeyDown(event, onOpen)}>
         <span className="time-tag">{item.period}</span>
         <h3>{item.title}</h3>
         <h4>{item.company}</h4>
         <p className="location-line"><MapPin size={14} /> {item.location}</p>
         <p>{item.description}</p>
-      </div>
+        <DetailHint />
+      </article>
     </div>
   );
 }
 
-function EducationItem({ item }) {
+function EducationItem({ item, onOpen }) {
   return (
     <div className="timeline-item reveal">
       <div className="timeline-dot" />
-      <div className="timeline-card education-card">
+      <article className="timeline-card education-card interactive-card" role="button" tabIndex={0} aria-haspopup="dialog" onClick={onOpen} onKeyDown={(event) => handleCardKeyDown(event, onOpen)}>
         <span className="time-tag">{item.period}</span>
         <h3>{item.title}</h3>
         <h4>{item.school}</h4>
         {item.note && <p className="note-line">{item.note}</p>}
-      </div>
+        <DetailHint />
+      </article>
     </div>
   );
 }
@@ -897,6 +1012,45 @@ function LeadershipItem({ item, onOpen }) {
     }}>
       <h3>{item.title}</h3>
       <p>{item.org}</p>
+    </div>
+  );
+}
+
+function handleCardKeyDown(event, onOpen) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    onOpen();
+  }
+}
+
+function DetailHint() {
+  return <span className="detail-card-hint">View details <ArrowUpRight size={15} aria-hidden="true" /></span>;
+}
+
+function DetailModal({ detail, onClose }) {
+  return (
+    <div className="project-modal-overlay" onClick={onClose}>
+      <section className="project-modal detail-modal" onClick={(event) => event.stopPropagation()} role="dialog" aria-modal="true" aria-labelledby="detail-modal-title">
+        <button type="button" className="modal-close" onClick={onClose} aria-label={`Close ${detail.title} details`}>×</button>
+        <div className="project-modal-header">
+          <div className="project-modal-icon">{detail.icon || <Sparkles size={28} />}</div>
+          <div>
+            <span className="project-category modal-category">{detail.eyebrow}</span>
+            <h3 id="detail-modal-title">{detail.title}</h3>
+          </div>
+        </div>
+        <p className="project-modal-summary">{detail.summary}</p>
+        <div className="detail-modal-sections">
+          {detail.sections.map((section) => (
+            <section className="project-modal-section" key={section.title}>
+              <h4>{section.title}</h4>
+              {section.body && <p>{section.body}</p>}
+              {section.items && <ul>{section.items.map((item) => <li key={item}>{item}</li>)}</ul>}
+              {section.tags && <div className="tag-list modal-tag-list">{section.tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}</div>}
+            </section>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
